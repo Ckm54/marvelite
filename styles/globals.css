@@ -23,5 +23,8 @@ body {
   .about-img {
     display: none;
   }
+  .navbar {
+    height: 50vh;
+  }
 }
 
