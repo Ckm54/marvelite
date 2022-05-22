@@ -5,8 +5,8 @@ import Thumbnails from './Thumbnails'
 function Main() {
   return (
     <div>
-      <div className='flex justify-between mx-10 mt-4'>
-        <h2 className='text-titleRed font-semibold text-2xl'>Common Superheroes</h2>
+      <div className='flex flex-col justify-between mx-10 mt-4 md:flex-row'>
+        <h2 className='text-xl text-titleRed font-semibold md:text-2xl'>Common Superheroes</h2>
         <Search />
       </div>
       <Thumbnails />

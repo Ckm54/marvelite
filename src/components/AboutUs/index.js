@@ -6,10 +6,10 @@ function About() {
   return (
     <div>
       <div className='flex justify-between grid gap-4 md:grid-cols-12'>
-        <div className='col-start-0 col-span-4'>
+        <div className='about-img col-start-0 col-span-4'>
           <Image src={require('../../img/about-us.jpg')} alt='captain' objectFit='cover' layout='responsive' width='500px' height='500px'/>
         </div>
-        <div className='col-start-6 col-span-6 flex flex-col justify-center mt-10 p-6'>
+        <div className='md:col-start-6 md:col-span-6 flex flex-col justify-center mt-10 p-6'>
           <div>
             <h2 className='p-4 text-titleRed text-4xl font-normal md:font-bold'>About This Site</h2>
             <p className='text-justify p-4 tracking-wide text-lg'>

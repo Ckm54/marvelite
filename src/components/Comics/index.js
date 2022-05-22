@@ -5,8 +5,8 @@ import Image from 'next/image'
 function Comics() {
   return (
     <div>
-      <h3 className='text-titleRed font-semibold text-2xl pl-4 mt-3 ml-10'>Comics:</h3>
-      <div className='max-w-10xl px-5 mx-auto container grid gap-2 grid-cols-3 mt-2'>
+      <h3 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>Comics:</h3>
+      <div className='max-w-10xl px-5 mx-auto container md:grid gap-2 grid-cols-3 mt-2'>
         <div className='max-w-sm rounded overflow-hidden shadow-lg mt-8 bg-white'>
           <div>
             <Image src={require('../../img/Gotg_2.jpg')} alt='captain' objectFit='cover' width='500px' height='600px' layout='responsive'/>
