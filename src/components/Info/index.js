@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Comics from '../Comics'
 
 function Info() {
   return (
@@ -7,7 +8,7 @@ function Info() {
       <h2>SuperHero</h2>
       <div className='grid grid-cols-8 mt-6'>
         <div className='col-start-2 col-span-2'>
-          <Image src={require('../../img/img3.jpg')} alt='captain' objectFit='cover' width='500px' height='350px' layout='responsive'/>
+          <Image src={require('../../img/groot.jpg')} alt='captain' objectFit='cover' width='500px' height='350px' layout='responsive'/>
         </div>
         <div className='col-start-4 col-span-4 px-6'>
           <div>
@@ -24,6 +25,7 @@ function Info() {
           <p className='mt-8'>Comics: 1200 | Events: 345 | Appearances: 90</p>
         </div>
       </div>
+      <Comics />
     </div>
   )
 }
