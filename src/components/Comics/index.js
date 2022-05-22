@@ -29,7 +29,7 @@ function Comics() {
 
         <div className='max-w-sm rounded overflow-hidden shadow-lg mt-8 bg-white scale-100 hover:scale-105 ease-in duration-200'>
           <div>
-            <Image src={require('../../img/Gotg_2.jpg')} alt='captain' objectFit='cover' width='500px' height='600px' layout='responsive'/>
+            <Image src={require('../../img/groot-comic.jpeg')} alt='captain' objectFit='cover' width='500px' height='600px' layout='responsive'/>
           </div>
           <div className='px-5 text-justify mb-7 pb-5'>
             <h4 className='py-3 text-lg'>captain</h4>
@@ -69,7 +69,7 @@ function Comics() {
 
         <div className='max-w-sm rounded overflow-hidden shadow-lg mt-8 bg-white scale-100 hover:scale-105 ease-in duration-200'>
           <div>
-            <Image src={require('../../img/Gotg_2.jpg')} alt='captain' objectFit='cover' width='500px' height='600px' layout='responsive'/>
+            <Image src={require('../../img/groot-comic.jpeg')} alt='captain' objectFit='cover' width='500px' height='600px' layout='responsive'/>
           </div>
           <div className='px-5 text-justify mb-7 pb-5'>
             <h4 className='py-3 text-lg'>captain</h4>
