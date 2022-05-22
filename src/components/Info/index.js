@@ -8,7 +8,7 @@ function Info() {
       <h2 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>SuperHero:</h2>
       <div className='md:grid grid-cols-8 mt-6'>
         <div className='col-start-2 col-span-2'>
-          <Image src={require('../../img/groot.jpg')} alt='captain' objectFit='cover' width='500px' height='400px' layout='responsive'/>
+          <Image src={require('../../img/groot.jpg')} alt='captain' objectFit='fill' width='300px' height='300px' layout='responsive'/>
         </div>
         <div className='col-start-4 col-span-4 px-6 bg-white py-6'>
           <h2 className='font-bold text-2xl'>Groot</h2>
