@@ -19,3 +19,9 @@ body {
   background-blend-mode: soft-light;
 }
 
+@media (max-width:780px) {
+  .about-img {
+    display: none;
+  }
+}
+
