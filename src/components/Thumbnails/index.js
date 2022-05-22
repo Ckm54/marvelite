@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Thumbnails() {
   return (
-    <div className='max-w-6xl px-5 mx-auto container grid gap-4 grid-cols-3 mx-5 mt-6'>
+    <div className='max-w-8xl px-5 mx-auto container grid gap-4 grid-cols-4 mt-6'>
       <Link href='/information'>
         <div className='max-w-sm rounded overflow-hidden shadow-lg'>
           <div>
