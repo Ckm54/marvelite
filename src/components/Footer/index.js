@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <footer className='bg-black h-40 mt-6 p-5'>
+    <footer className='bg-black h-40 mt-10 p-5'>
       <Link href="/">
         <h3 className='text-red-500 font-bold text-4xl hover:cursor-pointer'>Marvelite</h3>
       </Link>
