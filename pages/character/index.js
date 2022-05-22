@@ -1,4 +1,4 @@
-import Info from "../../src/components/Info"
+import Info from "../../src/components/Character"
 
 export default function index() {
   return (
