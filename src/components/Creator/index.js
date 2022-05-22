@@ -1,6 +1,7 @@
 import React from 'react'
 import Comics from '../Comics'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function CreatorPage() {
   return (
@@ -22,6 +23,12 @@ function CreatorPage() {
           
           </p>
           <p className='mt-8'>Comics: 1200 | Events: 345 | Appearances: 90</p>
+          <p className='mt-8 text-lg text-titleRed font-medium'>
+            Characters:
+            <Link href='/character'>
+              <span className='pl-4 font-normal italic hover:cursor-pointer hover:text-red-600'>Groot</span>
+            </Link>
+          </p>
         </div>
       </div>
       <Comics />

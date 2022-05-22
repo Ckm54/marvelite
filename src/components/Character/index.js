@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Comics from '../Comics'
+import Link from 'next/link'
 
 function Info() {
   return (
@@ -19,9 +20,14 @@ function Info() {
           remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
           Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
           of Lorem Ipsum.
-          
           </p>
           <p className='mt-8'>Comics: 1200 | Events: 345 | Appearances: 90</p>
+          <p className='mt-8 text-lg text-titleRed font-medium'>
+            Comics:
+            <Link href='/comicdetail'>
+              <span className='pl-4 font-normal italic hover:cursor-pointer hover:text-red-600'>Some comic name ,</span>
+            </Link>
+          </p>
         </div>
       </div>
       <Comics />

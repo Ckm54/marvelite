@@ -21,8 +21,8 @@ function Comics() {
               Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
               of Lorem Ipsum.
             </p>
-            <Link href='/information'>
-              <p className='float-right py-6'>check it out</p>
+            <Link href='/comicdetail'>
+              <p className='font-medium text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
             </Link>
           </div>
         </div>
@@ -41,8 +41,8 @@ function Comics() {
               Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
               of Lorem Ipsum.
             </p>
-            <Link href='/information'>
-              <p className='float-right py-6'>check it out</p>
+            <Link href='/comicdetail'>
+            <p className='font-medium text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
             </Link>
           </div>
         </div>
@@ -61,8 +61,8 @@ function Comics() {
               Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
               of Lorem Ipsum.
             </p>
-            <Link href='/information'>
-              <p className='float-right py-6'>check it out</p>
+            <Link href='/comicdetail'>
+            <p className='font-medium text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
             </Link>
           </div>
         </div>
@@ -81,8 +81,8 @@ function Comics() {
               Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
               of Lorem Ipsum.
             </p>
-            <Link href='/information'>
-              <p className='float-right py-6'>check it out</p>
+            <Link href='/comicdetail'>
+            <p className='font-medium text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
             </Link>
           </div>
         </div>
