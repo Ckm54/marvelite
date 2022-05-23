@@ -16,7 +16,6 @@ export default function Home(props) {
   //   .then(res => res.json())
   //   .then(data => setHeroes(data.data))
   // }, [heroes])
-  // console.log(heroes)
 
   return (
     <Main characters={props}/>
