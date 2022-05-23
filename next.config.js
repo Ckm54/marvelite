@@ -6,6 +6,6 @@ const nextConfig = {
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['www.superherodb.com']
+    domains: ['i.annihil.us']
   }
 }
