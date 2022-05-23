@@ -9,7 +9,7 @@ function Main({characters}) {
         <h2 className='text-xl text-titleRed font-semibold md:text-2xl'>Common Superheroes</h2>
         <Search />
       </div>
-      <Thumbnails heroes={characters}/>
+      <Thumbnails characters={characters}/>
     </div>
   )
 }
