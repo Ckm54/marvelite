@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Search from './Search'
 import Thumbnails from './Thumbnails'
 
+import { ts, hash, PUBLIC_KEY } from "../../pages/api/hello"
+
 function Main({characters}) {
   const[loading, setLoading] = useState(false)
 
@@ -11,8 +13,10 @@ function Main({characters}) {
     setHeroes(characters.data.results)
   }, [characters])
 
-  function handleHeroSearch(searchTerm) {
+  async function handleHeroSearch(searchTerm) {
+    const searchResults = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&&nameStartsWith=${searchTerm}&orderBy=name&apikey=${PUBLIC_KEY}&hash=${hash}`).then(res => res.json())
     console.log("in the main component: ", searchTerm)
+    setHeroes(searchResults.data.results)
   }
   return (
     <div>
