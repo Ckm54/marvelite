@@ -4,6 +4,9 @@ import Thumbnails from './Thumbnails'
 
 import { ts, hash, PUBLIC_KEY } from "../../pages/api/hello"
 
+export * from './Loader'
+
+
 function Main({characters}) {
   const[loading, setLoading] = useState(false)
   const [query, setQuery] = useState('')
