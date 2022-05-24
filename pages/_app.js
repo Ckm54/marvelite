@@ -9,8 +9,7 @@ import {useProgressStore} from '../store'
 
 
 function MyApp({ Component, pageProps }) {
-  document.title="Marvelite"
-  
+
   const setIsAnimating = useProgressStore((state) => state.setIsAnimating)
   const isAnimating = useProgressStore((state) => state.isAnimating)
 
