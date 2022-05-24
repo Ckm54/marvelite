@@ -9,6 +9,7 @@ function Search({ filterData }) {
   function handleSubmit(e) {
     e.preventDefault()
    filterData(searchQuery)
+   setSearchQuery('')
   }
   return (
     <form className='mt-3 md:mt-0' onSubmit={handleSubmit}>
