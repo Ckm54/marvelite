@@ -4,29 +4,27 @@ import Comics from '../Comics'
 import Link from 'next/link'
 
 function Info({ character }) {
-  console.log("in info component: ", character)
+  const heroInfo = character.data.results[0]
+  console.log(heroInfo)
   return (
     <div>
       <h2 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>SuperHero:</h2>
       <div className='md:grid grid-cols-8 mt-6'>
         <div className='col-start-2 col-span-2'>
-          <Image src={require('../../img/groot.jpg')} alt='captain' objectFit='fill' width='300px' height='300px' layout='responsive'/>
+          <Image src={`${heroInfo.thumbnail.path}.${heroInfo.thumbnail.extension}`} alt='captain' objectFit='fill' width='300px' height='300px' layout='responsive'/>
         </div>
         <div className='col-start-4 col-span-4 px-6 bg-white py-6'>
-          <h2 className='font-bold text-2xl'>Groot</h2>
+          <h2 className='font-bold text-2xl mb-5'>{heroInfo.name}</h2>
           <p className='text-justify'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
-          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
-          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
-          of Lorem Ipsum.
+          {heroInfo.description}
           </p>
-          <p className='mt-8'>Comics: 1200 | Events: 345 | Appearances: 90</p>
+          <p className='mt-8'>Comics: {heroInfo.comics.available} | Events: {heroInfo.events.available} | Stories: {heroInfo.stories.available}</p>
           <p className='mt-8 text-lg text-titleRed font-medium'>
             Comics:
             <Link href='/comicdetail'>
-              <span className='pl-4 font-normal italic hover:cursor-pointer hover:text-red-600'>Some comic name ,</span>
+              <span className='pl-4 font-normal italic'>{
+                heroInfo.comics.items.map((comic) => <span key={comic.name} className="mr-5 hover:cursor-pointer hover:text-red-600">{comic.name} ,</span>)
+              }</span>
             </Link>
           </p>
         </div>
