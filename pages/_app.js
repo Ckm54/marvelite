@@ -36,8 +36,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <NavBar />
       <Progress isAnimating={isAnimating} />
+      <NavBar />
       <Component {...pageProps} />
       <Footer />
     </>
