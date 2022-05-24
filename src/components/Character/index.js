@@ -3,7 +3,8 @@ import React from 'react'
 import Comics from '../Comics'
 import Link from 'next/link'
 
-function Info() {
+function Info({ character }) {
+  console.log("in info component: ", character)
   return (
     <div>
       <h2 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>SuperHero:</h2>
