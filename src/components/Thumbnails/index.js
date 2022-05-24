@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from 'next/link'
 import Loader from '../Loader'
 
-function Thumbnails({heroes, loading, attribution}) {
+function Thumbnails({ heroes, loading, attribution }) {
 
   console.log(loading)
   return (
