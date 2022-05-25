@@ -5,7 +5,7 @@ import Image from 'next/image'
 function Comics({ characterComics }) {
   const comicData = characterComics.data.results
 
-  console.log(characterComics)
+  // console.log(characterComics)
   return (
     <div>
       <h3 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>Comics:</h3>
@@ -26,7 +26,7 @@ function Comics({ characterComics }) {
                 <Link href={{
                   pathname: '/comicdetail',
                   query: comic.id
-                }} as={`/comic/title=${comic.title.replace(/[ ]/g, '-')}/id=${comic.id}`} key={comic.id}>
+                }} as={`/comic/${comic.id}`} key={comic.id}>
                   <p className='font-medium text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
                 </Link>
               </div>
