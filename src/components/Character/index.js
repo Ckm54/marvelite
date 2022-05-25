@@ -22,11 +22,17 @@ function Info({ character, characterComics }) {
             <p className='mt-4 text-gray-500'>Comics: {heroInfo.comics.available} | Events: {heroInfo.events.available} | Stories: {heroInfo.stories.available}</p>
             <p className='mt-4 text-lg text-titleRed font-medium'>Comics:</p>
             <p className='text-titleRed text-justify'>
-              <Link href='/comicdetail'>
-                <span className='pl-4 font-normal italic'>{
-                  heroInfo.comics.items.map((comic) => <span key={comic.name} className="mr-5 hover:cursor-pointer hover:text-red-600">{comic.name} ,</span>)
-                }</span>
-              </Link>
+            {
+              heroInfo.comics.items.map((comic) =>
+              (<Link key={comic.name} href={{
+                pathname: '/comicdetail',
+                query: (comic.resourceURI.split('/').pop())
+                }} as={`/comic/${(comic.resourceURI.split('/').pop())}`}>
+                <span className='pl-4 font-normal italic'>
+                  <span className="mr-5 hover:cursor-pointer hover:text-red-600">{comic.name} ,</span>
+                </span>
+              </Link>)
+            )}
             </p>
           </div>
           <p className='bg-gray-200 pl-4 py-2 text-titleRed text-xl'>{character.attributionText}</p>
