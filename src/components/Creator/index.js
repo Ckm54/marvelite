@@ -36,7 +36,7 @@ function CreatorPage({ creatorData, comicData }) {
           <p className='bg-gray-200 pl-4 py-2 text-titleRed text-xl'>{creatorData.attributionText}</p>
         </div>
       </div>
-      <Comics characterComics={comics}/>
+      <Comics characterComics={comics} attribution={creatorData.attributionText}/>
     </>
   )
 }
