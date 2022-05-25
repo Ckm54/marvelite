@@ -26,7 +26,7 @@ function Comics({ characterComics }) {
                 <Link href={{
                   pathname: '/comicdetail',
                   query: comic.id
-                }} as={`/comic/${comic.title.replace(/[ ]/g, '-')}/id=${comic.id}`} key={comic.id}>
+                }} as={`/comic/title=${comic.title.replace(/[ ]/g, '-')}/id=${comic.id}`} key={comic.id}>
                   <p className='font-medium text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
                 </Link>
               </div>
