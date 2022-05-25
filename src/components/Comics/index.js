@@ -25,7 +25,7 @@ function Comics({ characterComics }) {
                   pathname: '/comicdetail',
                   query: comic.id
                 }} as={`/comic/${comic.id}`} key={comic.id}>
-                  <p className='font-medium text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
+                  <p className='font-bold text-lg float-right py-6 text-titleRed hover:text-red-600 hover:cursor-pointer'>check it out</p>
                 </Link>
               </div>
             </div>
