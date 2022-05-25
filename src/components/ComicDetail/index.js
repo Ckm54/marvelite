@@ -16,13 +16,14 @@ function ComicDetail({ comicData }) {
         </div>
         <div className='col-start-3 flex flex-col justify-between col-span-4 bg-white'>
           <div className='p-10'>
-            <h2 className='font-bold text-2xl'>Format: <span>{comic.format}</span></h2>
+            <h2 className='font-bold text-2xl mb-4'>Format: <span>{comic.format}</span></h2>
             <p className='text-justify text-lg tracking-wide' dangerouslySetInnerHTML={{
               __html: `${comic.description}`
             }} style={{whiteSpace: "pre-line"}}>
             </p>
             <p className='mt-8 text-lg text-titleRed font-medium'>
               Characters:
+              <br />
               {comic.characters.items.map((character) => {
                 return (
                   <Link key={character.resourceURI} href={{
@@ -36,6 +37,7 @@ function ComicDetail({ comicData }) {
             </p>
             <p className='mt-8 text-lg text-titleRed font-medium'>
               Creators:
+              <br />
               {comic.creators.items.map((creator) => {
                 return (
                   <Link key={creator.resourceURI} href={{
