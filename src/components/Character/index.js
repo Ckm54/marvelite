@@ -3,9 +3,9 @@ import React from 'react'
 import Comics from '../Comics'
 import Link from 'next/link'
 
-function Info({ character }) {
+function Info({ character, characterComics }) {
   const heroInfo = character.data.results[0]
-  console.log(heroInfo)
+  
   return (
     <div>
       <h2 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>SuperHero:</h2>
@@ -32,7 +32,7 @@ function Info({ character }) {
           <p className='bg-gray-200 pl-4 py-2 text-titleRed text-xl'>{character.attributionText}</p>
         </div>
       </div>
-      <Comics />
+      <Comics characterComics={characterComics}/>
     </div>
   )
 }
