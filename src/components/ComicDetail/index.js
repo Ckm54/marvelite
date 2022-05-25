@@ -18,8 +18,9 @@ function ComicDetail({ comicData }) {
         </div>
         <div className='col-start-3  col-span-4 p-10 bg-white'>
           <h2 className='font-bold text-2xl'>Format: <span>{comic.format}</span></h2>
-          <p className='text-justify text-lg tracking-wide'>
-          {comic.description}
+          <p className='text-justify text-lg tracking-wide' dangerouslySetInnerHTML={{
+            __html: `${comic.description}`
+          }} style={{whiteSpace: "pre-line"}}>
           </p>
           <p className='mt-8 text-lg text-titleRed font-medium'>
             Characters:
