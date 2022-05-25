@@ -25,7 +25,10 @@ function ComicDetail({ comicData }) {
             Characters:
             {comic.characters.items.map((character) => {
               return (
-                <Link key={character.resourceURI} href='/character'>
+                <Link key={character.resourceURI} href={{
+                  pathname: '/character',
+                  query: (character.resourceURI.split('/').pop())
+                }} as={`/character/${(character.resourceURI.split('/').pop())}`}>
                   <span className='pl-4 font-normal italic hover:cursor-pointer hover:text-red-600'>{character.name},</span>
                 </Link>
               )
