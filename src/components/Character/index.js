@@ -19,8 +19,7 @@ function Info({ character, characterComics }) {
             <p className='text-justify'>
             {heroInfo.description ? heroInfo.description : "Sorry, Descriptive Info Not Provided by the API"}
             </p>
-            <p className='mt-4 text-gray-500'>Comics: {heroInfo.comics.available} | Events: {heroInfo.events.available} | Stories: {heroInfo.stories.available}</p>
-            <p className='mt-4 text-lg text-titleRed font-medium'>Comics:</p>
+            <p className='mt-4 text-lg text-titleRed font-bold'>Comics:</p>
             <p className='text-titleRed text-justify'>
             {
               heroInfo.comics.items.map((comic) =>
@@ -29,11 +28,12 @@ function Info({ character, characterComics }) {
                 query: (comic.resourceURI.split('/').pop())
                 }} as={`/comic/${(comic.resourceURI.split('/').pop())}`}>
                 <span className='pl-4 font-normal italic'>
-                  <span className="mr-5 hover:cursor-pointer hover:text-red-600">{comic.name} ,</span>
+                  <span className="mr-2 hover:cursor-pointer hover:text-red-600">{comic.name},</span>
                 </span>
               </Link>)
             )}
             </p>
+            <p className='mt-4 text-gray-500'>Comics: {heroInfo.comics.available} | Events: {heroInfo.events.available} | Stories: {heroInfo.stories.available}</p>
           </div>
           <p className='bg-gray-200 pl-4 py-2 text-titleRed text-xl'>{character.attributionText}</p>
         </div>
