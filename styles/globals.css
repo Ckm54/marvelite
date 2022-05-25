@@ -22,6 +22,18 @@ body {
   background-blend-mode: soft-light;
 }
 
+.wrapper {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+          "aside header header"
+          "aside content right"
+          "left content right";
+}
+
+.card {
+  height: fit-content;
+}
+
 @media (max-width:780px) {
   .about-img {
     display: none;
