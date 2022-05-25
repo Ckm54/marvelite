@@ -18,8 +18,14 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
+
+  function generateLetter() {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz"
   
-  const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&&limit=24&apikey=${PUBLIC_KEY}&hash=${hash}`)
+    return alphabet[Math.floor(Math.random() * alphabet.length)]
+  }
+  
+  const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&&nameStartsWith=${generateLetter()}&&limit=24&apikey=${PUBLIC_KEY}&hash=${hash}`)
   const data = await response.json()
 
   return {
