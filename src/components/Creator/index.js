@@ -3,8 +3,6 @@ import Comics from '../Comics'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ts, PUBLIC_KEY, hash } from '../../../pages/api/hello'
-
 function CreatorPage({ creatorData, comicData }) {
   const creator = creatorData.data.results[0]
   
