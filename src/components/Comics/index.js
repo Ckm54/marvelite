@@ -16,7 +16,7 @@ function Comics({ characterComics, attribution }) {
               <div>
                 <Image src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt='captain' objectFit='cover' width='500px' height='600px' layout='responsive'/>
               </div>
-              <div className='px-5 text-justify mb-7 pb-5'>
+              <div className='px-5 text-justify mb-4 pb-5'>
                 <h4 className='py-3 text-lg font-semibold text-titleRed'>{comic.title}</h4>
                 <p dangerouslySetInnerHTML={{
                     __html: `${comic.description}`
