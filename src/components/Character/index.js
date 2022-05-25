@@ -38,7 +38,7 @@ function Info({ character, characterComics }) {
           <p className='bg-gray-200 pl-4 py-2 text-titleRed text-xl'>{character.attributionText}</p>
         </div>
       </div>
-      <Comics characterComics={characterComics}/>
+      <Comics characterComics={characterComics.data.results}/>
     </div>
   )
 }
