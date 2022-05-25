@@ -38,7 +38,10 @@ function ComicDetail({ comicData }) {
             Creators:
             {comic.creators.items.map((creator) => {
               return (
-                <Link key={creator.resourceURI} href='/creator'>
+                <Link key={creator.resourceURI} href={{
+                  pathname: '/creator',
+                  query: (creator.resourceURI.split('/').pop())
+                }} as={`/character/${(creator.resourceURI.split('/').pop())}`}>
                   <span className='pl-4 font-normal italic hover:cursor-pointer hover:text-red-600'>{creator.name},</span>
                 </Link>
               )
