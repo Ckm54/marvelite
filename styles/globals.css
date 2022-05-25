@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('http://fonts.cdnfonts.com/css/marvel');
+
 html {
   padding: 0;
   margin: 0;
 }
 body {
   background: #C8C4C4;
+  font-family: 'Marvel', sans-serif;
 }
 
 .navbar {
