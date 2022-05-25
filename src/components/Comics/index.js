@@ -17,8 +17,9 @@ function Comics({ characterComics }) {
               </div>
               <div className='px-5 text-justify mb-7 pb-5'>
                 <h4 className='py-3 text-lg'>{comic.title}</h4>
-                <p>
-                  {comic.description}
+                <p dangerouslySetInnerHTML={{
+                    __html: `${comic.description}`
+                  }} style={{whiteSpace: "pre-line"}}>
                 </p>
                 <Link href={{
                   pathname: '/comicdetail',
