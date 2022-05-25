@@ -11,8 +11,8 @@ export default function index({ character, characterComics }) {
 export async function getServerSideProps(context) {
   const dataIdObj = context.query
   const id = Number(dataIdObj.characterId)
-  const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`)
-  const character = await response.json()
+  const characterResponse = await fetch(`https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`)
+  const character = await characterResponse.json()
 
   const comicResponse = await fetch(`https://gateway.marvel.com:443/v1/public/characters/${id}/comics?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`)
   const characterComics = await comicResponse.json()
