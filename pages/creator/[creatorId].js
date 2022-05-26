@@ -4,7 +4,6 @@ import { ts, PUBLIC_KEY, hash } from "../api/hello"
 
 export default function Creator({ creatorData, comicData }) {
 
-  console.log("comic data: ", comicData)
 
   return (
     <CreatorPage creatorData={creatorData} comicData={comicData}/>
