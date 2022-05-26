@@ -6,6 +6,7 @@ import {useRouter} from "next/router"
 
 import { Progress } from '../src/components/Main'
 import {useProgressStore} from '../store'
+import { AuthContextProvider } from "../context/AuthContext"
 
 
 function MyApp({ Component, pageProps }) {
@@ -35,12 +36,12 @@ function MyApp({ Component, pageProps }) {
   },[setIsAnimating, router])
 
   return (
-    <>
+    <AuthContextProvider>
       <Progress isAnimating={isAnimating} />
       <NavBar />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </AuthContextProvider>
   )
 }
 
