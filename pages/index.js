@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Main from '../src/components/Main'
 import { ts, hash, PUBLIC_KEY } from './api/hello'
 
@@ -13,11 +14,16 @@ export default function Home(props) {
   // }, [heroes])
 
   return (
-    <Main characters={props}/>
+    <>
+      <Head>
+        <title>Marvelite</title>
+      </Head>
+      <Main characters={props}/>
+    </>
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
 
   function generateLetter() {
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
