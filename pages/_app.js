@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import NavBar from '../src/components/NavBar'
 import Footer from '../src/components/Footer'
+import ProtectedRoute from "../src/components/ProtectedRoute"
 import {useEffect} from "react"
 import {useRouter} from "next/router"
 
@@ -8,6 +9,7 @@ import { Progress } from '../src/components/Main'
 import {useProgressStore} from '../store'
 import { AuthContextProvider } from "../context/AuthContext"
 
+const noAuthRequired = ['/login', '/signup']
 
 function MyApp({ Component, pageProps }) {
 
@@ -39,7 +41,14 @@ function MyApp({ Component, pageProps }) {
     <AuthContextProvider>
       <Progress isAnimating={isAnimating} />
       <NavBar />
-      <Component {...pageProps} />
+      {noAuthRequired.includes(router.pathname) ?
+        <Component {...pageProps} />
+      :
+      <ProtectedRoute>
+        <Component {...pageProps} />
+      </ProtectedRoute>
+    }
+      
       <Footer />
     </AuthContextProvider>
   )
