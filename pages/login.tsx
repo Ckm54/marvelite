@@ -1,14 +1,31 @@
+import { useAuth } from "context/AuthContext";
+import Router, { useRouter } from "node_modules/next/router";
 import React, {useState} from "react";
 
 const Login = () => {
+  const router = useRouter()
+  const { user, login } = useAuth()
   const [data, setData] = useState({
     email: "",
     password: "",
   })
 
-  const handleLogin = (e: any) => {
+  const handleLogin = async (e: any) => {
     e.preventDefault();
-    console.log(data);
+
+    console.log("logged in: ", user)
+      try {
+        await login(data.email, data.password)
+        Router.push('/home')
+      } catch(err) {
+        console.log(err)
+      }
+  
+      setData({
+        ...data,
+        email: "",
+        password: "",
+      })
   }
 
   return (
