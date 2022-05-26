@@ -12,7 +12,7 @@ function Comics({ characterComics, attribution }) {
         {characterComics.map((comic) => {
           if(comic.description) {
             return (
-              <div key={comic.id} className='flex flex-col card max-w-sm rounded overflow-hidden shadow-lg mt-8 bg-white scale-100 hover:scale-105 ease-in duration-200'>
+              <div key={comic.id} className='flex flex-col mx-4 rounded overflow-hidden shadow-lg mt-8 bg-white scale-100 hover:scale-105 ease-in duration-200'>
               <div>
                 <Image src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt='captain' objectFit='cover' width='500px' height='600px' layout='responsive'/>
               </div>

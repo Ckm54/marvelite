@@ -17,10 +17,10 @@ function ComicDetail({ comicData }) {
         <div className='col-start-3 flex flex-col justify-between col-span-4 bg-white'>
           <div className='p-10'>
             <h2 className='font-bold text-2xl mb-4'>Format: <span>{comic.format}</span></h2>
-            <p className='text-justify text-lg tracking-wide' dangerouslySetInnerHTML={{
+            {comic.description ? <p className='text-justify text-lg tracking-wide' dangerouslySetInnerHTML={{
               __html: `${comic.description}`
             }} style={{whiteSpace: "pre-line"}}>
-            </p>
+            </p> : <p className='text-justify text-lg tracking-wide'>No description provided by API</p>}
             <p className='mt-8 text-lg text-titleRed font-medium'>
               Characters:
               <br />
