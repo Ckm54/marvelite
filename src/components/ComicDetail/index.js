@@ -6,13 +6,12 @@ function ComicDetail({ comicData }) {
 
   const comic = comicData.data.results[0]
 
-  console.log(comic)
   return (
     <div className='flex flex-col mx-20 px-10'>
       <h2 className='text-titleRed font-semibold text-3xl mt-3 '>{comic.title}</h2>
       <div className='md:grid grid-cols-6 mt-6'>
         <div className='col-start-0 col-span-2'>
-          <Image src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt='captain' objectFit='fill' width='300px' height='300px' layout='responsive'/>
+          <Image priority src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt='captain' objectFit='fill' width='300px' height='300px' layout='responsive'/>
         </div>
         <div className='col-start-3 flex flex-col justify-between col-span-4 bg-white'>
           <div className='p-10'>

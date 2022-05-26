@@ -11,7 +11,6 @@ function Main({characters}) {
   const[loading, setLoading] = useState(false)
   const [query, setQuery] = useState('')
 
-  console.log(characters)
   const[heroes, setHeroes] = useState([])
   useEffect(() => {
     setHeroes(characters.data.results)

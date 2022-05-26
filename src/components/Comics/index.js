@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 function Comics({ characterComics, attribution }) {
-  console.log(attribution)
   return (
     <div>
       <h3 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>Comics:</h3>

@@ -3,12 +3,10 @@ import Image from "next/image"
 import Link from 'next/link'
 import Loader from '../Loader'
 
-function Thumbnails({ heroes, loading, attribution }) {
-
-  console.log(loading)
+function Thumbnails({ heroes, attribution }) {
   return (
     <div className='md:max-w-8xl md:px-5 mx-auto container md:grid gap-4 grid-cols-4 mt-6'>
-      {heroes.map((hero) => loading ? <Loader /> : <Link href={{
+      {heroes.map((hero) => <Link href={{
         pathname: '/character',
         query: hero.id
       }} as={`/character/${hero.id}`} key={hero.id}>
