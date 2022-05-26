@@ -1,5 +1,5 @@
 import { useAuth } from "context/AuthContext";
-import Router, { useRouter } from "node_modules/next/router";
+import { useRouter } from "node_modules/next/router";
 import React, {useState} from "react";
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
     console.log("logged in: ", user)
       try {
         await login(data.email, data.password)
-        Router.push('/home')
+        router.push('/home')
       } catch(err) {
         console.log(err)
       }
