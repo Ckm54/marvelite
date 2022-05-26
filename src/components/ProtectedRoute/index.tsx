@@ -13,7 +13,7 @@ const ProtectedRoute = ({children}: {children: React.ReactNode}) => {
     }
   }, [router, user])
   return (
-    children
+    <>{user ? children : null}</>
   )
 }
 
