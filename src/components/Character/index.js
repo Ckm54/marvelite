@@ -9,7 +9,7 @@ function Info({ character, characterComics }) {
   return (
     <div>
       <h2 className='text-titleRed font-semibold text-2xl pl-4 mt-3 md:ml-10'>SuperHero:</h2>
-      <div className='md:grid grid-cols-8 mt-6'>
+      <div className='xl:grid grid-cols-8 mt-6'>
         <div className='col-start-2 col-span-2'>
           <Image src={`${heroInfo.thumbnail.path}.${heroInfo.thumbnail.extension}`} alt='captain' objectFit='fill' width='300px' height='300px' layout='responsive'/>
         </div>

@@ -16,7 +16,7 @@ function index() {
             </Link>
           </li>
         </ul>
-        <h2 className='text-5xl md:text-6xl font-bold mt-20 ml-10 text-headerText'>All your SuperHero <br /> info in one place</h2>
+        <h2 className='text-5xl md:text-6xl font-bold xl:mt-20 ml-10 text-headerText'>All your SuperHero <br /> info in one place</h2>
     </nav>
   )
 }
