@@ -14,8 +14,10 @@ const ProtectedRoute = ({children}: {children: React.ReactNode}) => {
   }, [router, user])
   return (
     <>
-      <p className='text-green-700 text-lg py-2 px-5 font-semibold italic ml-5'>Welcome, you are logged in as: {user.email}</p>
-      {user ? children : null}
+      {user ? <>
+        <p className='text-green-700 text-lg py-2 px-5 font-semibold italic ml-5'>Welcome, you are logged in as: {user.email}</p>
+        {children}
+      </> : null}
     </>
   )
 }
