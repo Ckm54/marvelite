@@ -12,6 +12,12 @@
 /.next/
 /out/
 
+#keys
+/config/
+
+#api
+/api/
+
 # production
 /build
 
@@ -30,3 +36,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
