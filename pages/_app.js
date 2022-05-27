@@ -9,7 +9,7 @@ import { Progress } from '../src/components/Main'
 import {useProgressStore} from '../store'
 import { AuthContextProvider } from "../context/AuthContext"
 
-const noAuthRequired = ['/login', '/signup']
+const noAuthRequired = ['/', '/login', '/signup']
 
 function MyApp({ Component, pageProps }) {
 
