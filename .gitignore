@@ -16,7 +16,7 @@
 /config/
 
 #api
-/api/
+/pages/api/
 
 # production
 /build
