@@ -23,7 +23,7 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 
   function generateLetter() {
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
