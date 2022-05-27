@@ -1,12 +1,18 @@
 import React from 'react'
 import CreatorPage from '../../src/components/Creator'
 import { ts, PUBLIC_KEY, hash } from "../api/hello"
+import Head from 'next/head'
 
 export default function Creator({ creatorData, comicData }) {
 
 
   return (
-    <CreatorPage creatorData={creatorData} comicData={comicData}/>
+    <>
+      <Head>
+        <title>creator</title>
+      </Head>
+      <CreatorPage creatorData={creatorData} comicData={comicData}/>
+    </>
   )
 }
 

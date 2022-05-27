@@ -1,13 +1,19 @@
 import React from "react";
 import Main from "../src/components/Main";
 import { ts, hash, PUBLIC_KEY } from './api/hello'
+import Head from "node_modules/next/head";
 
 
 const Home = (props) => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <div>
       <Main characters={props}/>
     </div>
+    </>
   );
 }
 

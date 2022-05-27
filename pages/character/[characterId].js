@@ -1,10 +1,16 @@
 import Info from "../../src/components/Character"
 import { ts, PUBLIC_KEY, hash } from "../api/hello"
+import Head from "next/head"
 
 export default function index({ character, characterComics }) {
 
   return (
-    <Info character={character} characterComics={characterComics}/>
+    <>
+      <Head>
+        <title>Character</title>
+      </Head>
+      <Info character={character} characterComics={characterComics}/>
+    </>
   )
 }
 

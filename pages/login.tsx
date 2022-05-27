@@ -1,6 +1,7 @@
 import { useAuth } from "context/AuthContext";
 import { useRouter } from "node_modules/next/router";
 import React, {useState} from "react";
+import Head from "node_modules/next/head";
 
 const Login = () => {
   const router = useRouter()
@@ -31,7 +32,11 @@ const Login = () => {
   }
 
   return (
-    <div className="flex py-[20%] md:py-[10%] items-center justify-center bg-gray-100">
+    <>
+      <Head>
+        <title>Login</title>
+      </Head>
+      <div className="flex py-[20%] md:py-[10%] items-center justify-center bg-gray-100">
       <div className="px-8 py-6 text-left bg-white shadow-lg">
         <h1 className="text-2xl font-bold text-center text-titlered">Login</h1>
         <div className="mt-4">
@@ -49,6 +54,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

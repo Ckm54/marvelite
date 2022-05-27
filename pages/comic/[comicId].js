@@ -1,10 +1,16 @@
 import React from 'react'
 import ComicDetail from '../../src/components/ComicDetail'
 import { ts, PUBLIC_KEY, hash } from "../api/hello"
+import Head from 'next/head'
 
 export default function Detail({ comicData }) {
   return (
-    <ComicDetail comicData={comicData}/>
+    <>
+      <Head>
+        <title>Detail</title>
+      </Head>
+      <ComicDetail comicData={comicData}/>
+    </>
   )
 }
 
