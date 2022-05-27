@@ -23,8 +23,8 @@ function NavBar() {
               <button onClick={() => {
                 logout()
                 router.push('/login')
-              }}>
-                <a className='px-2 hover:text-red-600'>LogOut</a>
+              }} className="bg-titleRed text-white px-2 py-1 border border-titleRed rounded font-medium text-lg float-right text-titleRed hover:text-red-600 hover:cursor-pointer hover:text-titleRed hover:bg-transparent">
+                <a className='px-2 text-white hover:text-titleRed'>LogOut</a>
               </button>
             ) : (<>
               <Link href="/signup">
