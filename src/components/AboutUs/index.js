@@ -18,7 +18,7 @@ function About() {
               the marvel world and get all information including their specific comics and also the faces of the creators behind these comics.
             </p>
             <Link href='/'>
-              <button className='bg-titleRed text-slate-50 px-4 py-2 border border-titleRed rounded font-medium text-lg float-right text-titleRed hover:text-red-600 hover:cursor-pointer hover:text-titleRed hover:bg-transparent'>Back to hero search</button>
+              <button className='bg-titleRed text-slate-50 px-4 py-2 border border-titleRed rounded font-medium text-lg float-right text-titleRed hover:text-red-600 hover:cursor-pointer hover:text-titleRed hover:bg-transparent'>Back to hero search</button> 
             </Link>
           </div>
         </div>
