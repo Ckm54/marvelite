@@ -7,13 +7,13 @@ function ComicDetail({ comicData }) {
   const comic = comicData.data.results[0]
 
   return (
-    <div className='md:flex flex-col md:mx-20 md:px-10'>
+    <div className='md:flex flex-col md:mx-auto md:px-10'>
       <h2 className='text-titleRed font-semibold text-3xl mt-3 '>{comic.title}</h2>
       <div className='md:grid grid-cols-8 mt-6'>
-        <div className='col-start-0 col-span-2'>
+        <div className='col-start-2 col-span-2'>
           <Image priority src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt='captain' objectFit='fill' width='300px' height='300px' layout='responsive'/>
         </div>
-        <div className='col-start-3 flex flex-col justify-between col-span-4 bg-white'>
+        <div className='col-start-4 flex flex-col justify-between col-span-4 bg-white'>
           <div className='p-10'>
             <h2 className='font-bold text-2xl mb-4'>Format: <span>{comic.format}</span></h2>
             {comic.description ? <p className='text-justify text-lg tracking-wide' dangerouslySetInnerHTML={{
