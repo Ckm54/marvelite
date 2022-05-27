@@ -25,7 +25,7 @@ function Comics({ characterComics, attribution }) {
                   pathname: '/comicdetail',
                   query: comic.id
                 }} as={`/comic/${comic.id}`} key={comic.id}>
-                  <button className='bg-titleRed text-white px-3 py-1 border border-titleRed rounded my-3 font-medium text-lg float-right text-titleRed hover:text-red-600 hover:cursor-pointer hover:text-titleRed hover:bg-transparent'>Read More</button>
+                  <button className='text-slate-50 bg-titleRed px-3 py-1 border border-titleRed rounded my-3 font-medium text-lg float-right text-titleRed hover:text-red-600 hover:cursor-pointer hover:text-titleRed hover:bg-transparent'>Read More</button>
                 </Link>
               </div>
               <p className='px-4 py-2 bg-gray-300 text-titleRed'>{attribution}</p>
