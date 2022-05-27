@@ -9,13 +9,13 @@ function NavBar() {
   const router = useRouter()
   return (
     <nav className='navbar px-5'>
-        <ul className='flex justify-between'>
+        <ul className='md:flex justify-between'>
           <li className='mx-10 mt-6 text-4xl font-semibold text-titleRed hover:text-red-600'>
             <Link href="/">
               Marvelite
             </Link>
           </li>
-          <li className='mt-6 text-titleRed font-semibold text-2xl'>
+          <li className='mt-6 text-titleRed font-semibold text-2xl mb-4'>
             <Link href="/about">
               <a className='px-2 hover:text-red-600'>About</a>
             </Link>
