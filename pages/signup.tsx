@@ -1,9 +1,11 @@
 import React, {useState} from "react"
 import { useAuth } from "../context/AuthContext"
 import Head from "node_modules/next/head"
+import { useRouter } from "node_modules/next/router"
 
 const Signup = () => {
   const { user, signup } = useAuth()
+  const router = useRouter()
   
   const [data, setData] = useState({
     email: "",
@@ -14,6 +16,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       await signup(data.email, data.password)
+      router.push('/login')
     } catch(err) {
       console.log(err)
     }
