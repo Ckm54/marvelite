@@ -16,16 +16,19 @@ function NavBar() {
             </Link>
           </li>
           <li className='mt-6 text-titleRed font-semibold text-2xl mb-4'>
-            <Link href="/about">
-              <a className='px-2 hover:text-red-600'>About</a>
-            </Link>
+            
             {user ? (
-              <button onClick={() => {
-                logout()
-                router.push('/login')
-              }} className="bg-titleRed text-white px-2 py-1 border border-titleRed rounded font-medium text-lg float-right text-titleRed hover:text-red-600 hover:cursor-pointer hover:text-titleRed hover:bg-transparent">
-                <a className='px-2 text-white hover:text-titleRed'>LogOut</a>
-              </button>
+              <>
+                <Link href="/about">
+                  <a className='px-2 hover:text-red-600'>About</a>
+                </Link>
+                <button onClick={() => {
+                  logout()
+                  router.push('/login')
+                }} className="bg-titleRed text-white px-2 py-1 border border-titleRed rounded font-medium text-lg float-right text-titleRed hover:text-red-600 hover:cursor-pointer hover:text-titleRed hover:bg-transparent">
+                  <a className='px-2 text-white hover:text-titleRed'>LogOut</a>
+                </button>
+              </>
             ) : (<>
               <Link href="/signup">
                 <a className='px-2 hover:text-red-600'>Signup</a>
