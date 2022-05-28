@@ -13,10 +13,9 @@
 /out/
 
 #keys
-/config/
 
-#api
-/pages/api/
+
+
 
 # production
 /build
@@ -38,3 +37,6 @@ yarn-error.log*
 .vercel
 
 
+
+# Local Netlify folder
+.netlify
