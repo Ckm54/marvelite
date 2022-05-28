@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function About() {
+  
   return (
     <div>
       <div className='flex justify-between grid gap-4 md:grid-cols-12'>
