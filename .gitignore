@@ -13,9 +13,10 @@
 /out/
 
 #keys
+/config/
 
-
-
+#api
+/pages/api/
 
 # production
 /build
